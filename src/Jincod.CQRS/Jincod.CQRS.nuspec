@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Jincod.CQRS</id>
+    <version>$version$</version>
+    <authors>jincod</authors>
+    <owners>jincod</owners>
+    <licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+    <projectUrl>https://github.com/jincod/Jincod.CQRS</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Interfaces for for develop app using CQRS principle</description>
+    <tags>CQRS</tags>
+    <dependencies>
+      <dependency id="Castle.Windsor" version="3.3.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -6,13 +6,9 @@ namespace Jincod.CQRS.Queries
 {
     public class QueriesInstaller : IWindsorInstaller
     {
-        #region IWindsorInstaller Members
-
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Classes.FromThisAssembly().Pick().WithService.AllInterfaces());
+            container.Register(Component.For<IQuery<SimpleQueryContext, SimpleEntity>>().ImplementedBy<SimpleQuery>());
         }
-
-        #endregion
     }
 }

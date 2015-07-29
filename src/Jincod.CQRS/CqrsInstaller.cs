@@ -7,8 +7,6 @@ namespace Jincod.CQRS
 {
     public class CqrsInstaller : IWindsorInstaller
     {
-        #region IWindsorInstaller Members
-
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             // Command
@@ -30,7 +28,5 @@ namespace Jincod.CQRS
                     .ImplementedBy<QueryProcessor>()
                     .DependsOn(Dependency.OnValue("func", resolveQueryProcessorFunc)));
         }
-
-        #endregion
     }
 }

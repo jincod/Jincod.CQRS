@@ -68,8 +68,6 @@ commandProcessor.Process(simpleCommand);
 
 # Installation
 
-Available on [NuGet](https://www.nuget.org/)
-
 * Install-Package [Jincod.CQRS](https://www.nuget.org/packages/Jincod.CQRS)
 
 # License

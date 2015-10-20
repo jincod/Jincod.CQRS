@@ -1,6 +1,8 @@
 ﻿using System;
 using Castle.Windsor;
 using Jincod.CQRS.Commands;
+using Jincod.CQRS.Dependencies;
+using Jincod.CQRS.Domain;
 using Jincod.CQRS.Queries;
 
 namespace Jincod.CQRS.ConsoleApp

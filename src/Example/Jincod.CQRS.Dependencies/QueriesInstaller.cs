@@ -1,8 +1,10 @@
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
+using Jincod.CQRS.Domain;
+using Jincod.CQRS.Queries;
 
-namespace Jincod.CQRS.Queries
+namespace Jincod.CQRS.Dependencies
 {
     public class QueriesInstaller : IWindsorInstaller
     {

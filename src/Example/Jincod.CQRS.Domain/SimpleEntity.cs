@@ -1,4 +1,4 @@
-﻿namespace Jincod.CQRS.Queries
+﻿namespace Jincod.CQRS.Domain
 {
     public class SimpleEntity
     {

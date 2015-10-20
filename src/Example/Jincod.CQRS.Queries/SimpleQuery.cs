@@ -1,4 +1,6 @@
-﻿namespace Jincod.CQRS.Queries
+﻿using Jincod.CQRS.Domain;
+
+namespace Jincod.CQRS.Queries
 {
     public class SimpleQueryContext : IQueryContext<SimpleEntity>
     {

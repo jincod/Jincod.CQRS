@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9150501-5EA0-4F89-9301-2AB35A32A5FB}</ProjectGuid>
+    <ProjectGuid>{0CB59E7F-2CAF-4C68-B7FD-985E615CF225}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jincod.CQRS.Queries</RootNamespace>
-    <AssemblyName>Jincod.CQRS.Queries</AssemblyName>
+    <RootNamespace>Jincod.CQRS.Domain</RootNamespace>
+    <AssemblyName>Jincod.CQRS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,21 +36,12 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Jincod.CQRS\Jincod.CQRS.csproj">
-      <Project>{5f10e8f9-5743-4c99-92b6-211fa802f0d5}</Project>
-      <Name>Jincod.CQRS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Jincod.CQRS.Domain\Jincod.CQRS.Domain.csproj">
-      <Project>{0cb59e7f-2caf-4c68-b7fd-985e615cf225}</Project>
-      <Name>Jincod.CQRS.Domain</Name>
-    </ProjectReference>
+    <Compile Include="SimpleEntity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

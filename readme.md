@@ -1,6 +1,8 @@
 Jincod.CQRS
 ====================
 
+[![NuGet](https://img.shields.io/nuget/v/jincod.cqrs.svg)](https://www.nuget.org/packages/Jincod.CQRS)
+
 Interfaces for for develop app using CQRS principle
 
 ## Examples ([Full example](https://github.com/jincod/Jincod.CQRS/tree/master/src/Example))

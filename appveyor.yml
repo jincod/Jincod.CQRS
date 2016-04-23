@@ -1,0 +1,6 @@
+before_build:
+  - nuget restore
+
+configuration:
+  - Debug
+  - Release

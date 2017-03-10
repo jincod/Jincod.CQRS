@@ -10,7 +10,7 @@ namespace Jincod.CQRS.Queries
     {
         public SimpleEntity Execute(SimpleQueryContext queryContext)
         {
-            return new SimpleEntity {Name = "Simpl1"};
+            return new SimpleEntity {Name = "Simple1"};
         }
     }
 }

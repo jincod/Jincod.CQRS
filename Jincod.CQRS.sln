@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS", "src\Jincod.CQRS\Jincod.CQRS.csproj", "{5F10E8F9-5743-4C99-92B6-211FA802F0D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Commands", "src\example\Jincod.CQRS.Commands\Jincod.CQRS.Commands.csproj", "{9BECE2EA-5509-4F7D-9495-4337554C270D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Commands", "example\Jincod.CQRS.Commands\Jincod.CQRS.Commands.csproj", "{9BECE2EA-5509-4F7D-9495-4337554C270D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Queries", "src\example\Jincod.CQRS.Queries\Jincod.CQRS.Queries.csproj", "{C9150501-5EA0-4F89-9301-2AB35A32A5FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Queries", "example\Jincod.CQRS.Queries\Jincod.CQRS.Queries.csproj", "{C9150501-5EA0-4F89-9301-2AB35A32A5FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.ConsoleApp", "src\example\Jincod.CQRS.ConsoleApp\Jincod.CQRS.ConsoleApp.csproj", "{EF3FA6DD-C07C-4858-9839-FC322B9AE384}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.ConsoleApp", "example\Jincod.CQRS.ConsoleApp\Jincod.CQRS.ConsoleApp.csproj", "{EF3FA6DD-C07C-4858-9839-FC322B9AE384}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{3352C18E-FDC1-4BFA-8476-A1EA5CDCFEAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Domain", "src\Example\Jincod.CQRS.Domain\Jincod.CQRS.Domain.csproj", "{0CB59E7F-2CAF-4C68-B7FD-985E615CF225}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Domain", "Example\Jincod.CQRS.Domain\Jincod.CQRS.Domain.csproj", "{0CB59E7F-2CAF-4C68-B7FD-985E615CF225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Dependencies", "src\Example\Jincod.CQRS.Dependencies\Jincod.CQRS.Dependencies.csproj", "{6912569C-1000-4FF5-A68F-2FF571EB1C1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jincod.CQRS.Dependencies", "Example\Jincod.CQRS.Dependencies\Jincod.CQRS.Dependencies.csproj", "{6912569C-1000-4FF5-A68F-2FF571EB1C1D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

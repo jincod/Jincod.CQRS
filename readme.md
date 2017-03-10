@@ -5,7 +5,7 @@ Jincod.CQRS
 
 Interfaces for for develop app using CQRS principle
 
-## Examples ([Full example](https://github.com/jincod/Jincod.CQRS/tree/master/src/Example))
+## Examples ([Full example](https://github.com/jincod/Jincod.CQRS/tree/master/Example))
 
 ### Query
 

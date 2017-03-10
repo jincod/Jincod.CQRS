@@ -10,8 +10,5 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Interfaces for for develop app using CQRS principle</description>
     <tags>CQRS</tags>
-    <dependencies>
-      <dependency id="Castle.Windsor" version="3.3.0" />
-    </dependencies>
   </metadata>
 </package>

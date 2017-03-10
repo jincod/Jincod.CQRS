@@ -3,7 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 
-namespace Jincod.CQRS
+namespace Jincod.CQRS.Dependencies
 {
     public class CqrsInstaller : IWindsorInstaller
     {

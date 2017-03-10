@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandsInstaller.cs" />
+    <Compile Include="CqrsInstaller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueriesInstaller.cs" />
   </ItemGroup>

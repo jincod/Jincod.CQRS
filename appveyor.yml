@@ -4,7 +4,7 @@ image: Visual Studio 2017
 build_script:
   - dotnet restore
   - dotnet build --configuration Release
-  - dotnet pack src\Jincod.CQRS\Jincod.CQRS.csproj --configuration Release --output $(appveyor_build_folder)
+  - dotnet pack src\Jincod.CQRS\Jincod.CQRS.csproj --configuration Release --output %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
   - path: '*.nupkg'

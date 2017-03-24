@@ -1,5 +1,5 @@
 ﻿using System;
-using Castle.Windsor;
+using Autofac;
 using Jincod.CQRS.Commands;
 using Jincod.CQRS.Dependencies;
 using Jincod.CQRS.Domain;
@@ -11,8 +11,13 @@ namespace Jincod.CQRS.ConsoleApp
     {
         private static void Main(string[] args)
         {
-            var container = new WindsorContainer();
-            container.Install(new CqrsInstaller(), new CommandsInstaller(), new QueriesInstaller());
+            var builder = new ContainerBuilder();
+
+            builder.RegisterModule<CommandsModule>();
+            builder.RegisterModule<QueriesModule>();
+            builder.RegisterModule<CqrsModule>();
+
+            var container = builder.Build();
 
             var commandProcessor = container.Resolve<ICommandProcessor>();
             Console.WriteLine("Executing command ...");

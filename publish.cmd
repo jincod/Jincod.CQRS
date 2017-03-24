@@ -1,2 +1,2 @@
-nuget.exe pack src\Jincod.CQRS\Jincod.CQRS.csproj -Prop Configuration=Release
-nuget push Jincod.CQRS.1.1.0.0.nupkg %API_KEY%
+dotnet pack src\Jincod.CQRS\Jincod.CQRS.csproj --configuration Release --output %CD%
+dotnet nuget push Jincod.CQRS.2.0.0.0.nupkg %API_KEY%

@@ -1,6 +1,12 @@
-before_build:
-  - nuget restore
+version: 2.0.{build}
+image: Visual Studio 2017
 
-configuration:
-  - Debug
-  - Release
+build_script:
+  - dotnet restore
+  - dotnet build --configuration Release
+
+artifacts:
+  - path: '*.nupkg'
+
+after_build:
+  - ps: Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }

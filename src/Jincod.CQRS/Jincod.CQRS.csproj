@@ -3,7 +3,7 @@
    <TargetFrameworks>netstandard1.6;netcoreapp1.1;net46</TargetFrameworks>
    <PackageId>Jincod.CQRS</PackageId>
    <PackageVersion>2.0.0</PackageVersion>
-   <Authors>jincod</Authors>
+   <Authors>Vadim Abdrashitov</Authors>
    <Description>Interfaces for for develop app using CQRS principle</Description>
    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
    <PackageProjectUrl>https://github.com/jincod/Jincod.CQRS</PackageProjectUrl>

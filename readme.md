@@ -1,11 +1,19 @@
-Jincod.CQRS
-====================
+# Jincod.CQRS
+
 [![Build status](https://ci.appveyor.com/api/projects/status/mieoljc0aj53765m?svg=true)](https://ci.appveyor.com/project/jincod/jincod-cqrs)
 [![NuGet](https://img.shields.io/nuget/v/jincod.cqrs.svg)](https://www.nuget.org/packages/Jincod.CQRS)
 
 Interfaces for for develop app using CQRS principle
 
-## Examples ([Full example](https://github.com/jincod/Jincod.CQRS/tree/master/Example))
+## Installation
+
+NuGet package [Jincod.CQRS](https://www.nuget.org/packages/Jincod.CQRS)
+
+```PowerShell
+PM> Install-Package Jincod.CQRS
+```
+
+## Usage
 
 ### Query
 
@@ -67,11 +75,4 @@ var simpleCommand = new SimpleCommand();
 commandProcessor.Process(simpleCommand);
 ```
 
-
-# Installation
-
-* Install-Package [Jincod.CQRS](https://www.nuget.org/packages/Jincod.CQRS)
-
-# License
-
-MIT license - http://opensource.org/licenses/mit
+View [Full example](https://github.com/jincod/Jincod.CQRS/tree/master/Example)

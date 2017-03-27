@@ -10,7 +10,7 @@
     <ProjectReference Include="..\Jincod.CQRS.Commands\Jincod.CQRS.Commands.csproj" />
     <ProjectReference Include="..\Jincod.CQRS.Dependencies\Jincod.CQRS.Dependencies.csproj" />
     <ProjectReference Include="..\Jincod.CQRS.Domain\Jincod.CQRS.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Jincod.CQRS\Jincod.CQRS.csproj" />
     <ProjectReference Include="..\Jincod.CQRS.Queries\Jincod.CQRS.Queries.csproj" />
+    <ProjectReference Include="..\..\src\Jincod.CQRS\Jincod.CQRS.csproj" />
   </ItemGroup>
 </Project>

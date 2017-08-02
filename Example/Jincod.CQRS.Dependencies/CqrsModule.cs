@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Autofac;
 
 namespace Jincod.CQRS.Dependencies

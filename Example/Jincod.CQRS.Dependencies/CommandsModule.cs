@@ -10,7 +10,6 @@ namespace Jincod.CQRS.Dependencies
             builder
                 .RegisterType<SimpleCommandHandler>()
                 .As<ICommandHandler<SimpleCommand>>();
-
         }
     }
 }

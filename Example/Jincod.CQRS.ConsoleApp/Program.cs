@@ -23,6 +23,7 @@ namespace Jincod.CQRS.ConsoleApp
             Console.WriteLine("Executing command ...");
             var simpleCommand = new SimpleCommand();
             commandProcessor.Process(simpleCommand);
+            System.Console.WriteLine("Simple command");
 
             Console.WriteLine("Executing query ...");
             var queryProcessor = container.Resolve<IQueryProcessor>();

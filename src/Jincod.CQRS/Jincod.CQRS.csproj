@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-   <TargetFrameworks>netstandard1.6;netcoreapp1.1;net46</TargetFrameworks>
+   <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
    <PackageId>Jincod.CQRS</PackageId>
    <PackageVersion>2.0.0</PackageVersion>
    <Authors>Vadim Abdrashitov</Authors>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Query</h2>
+        <script src="https://gist-it.appspot.com/github/jincod/Jincod.CQRS/blob/master/Example/Jincod.CQRS.Queries/SimpleQuery.cs"></script>
+        <div id="query-app">
+          <button type="button" class="btn btn-secondary" v-on:click="makeQuery">Make query</button>
+          <template v-if="queryResult">
+            <p>
+              <h6>Query result</h6>
+              {{queryResult}}
+            </p>
+          </template>
+        </div>
+      </div>
+      <div>
+        <h2>Command</h2>
+        <script src="https://gist-it.appspot.com/github/jincod/Jincod.CQRS/blob/master/Example/Jincod.CQRS.Commands/SimpleCommand.cs"></script>
+        <div id="command-app">
+          <button type="button" class="btn btn-secondary" v-on:click="executeCommand">Execute command</button>
+          <template v-if="commandResult">
+            <p>
+              <h6>Command result</h6>
+              Created item id: {{commandResult}}
+            </p>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+      new Vue({
+        el: '#query-app',
+        data: {
+          queryResult: null
+        },
+        methods: {
+          makeQuery: function () {
+            const self = this;
+
+            axios.get('/api/home')
+              .then(function (response) {
+                self.queryResult = response.data.name;
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+          }
+        }
+      });
+      new Vue({
+        el: '#command-app',
+        data: {
+          commandResult: null
+        },
+        methods: {
+          executeCommand: function() {
+            const self = this;
+
+            axios.post('/api/home', {
+              name: 'example'
+            })
+            .then(function (response) {
+              self.commandResult = response.data.id;
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

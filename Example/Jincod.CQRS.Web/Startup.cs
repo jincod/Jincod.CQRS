@@ -34,6 +34,9 @@ namespace Jincod.CQRS.Web
         {
             loggerFactory.AddConsole();
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseMvc();
         }
     }

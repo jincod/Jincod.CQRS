@@ -29,7 +29,7 @@ namespace Jincod.CQRS.Web.Controllers
         {
             _commandProcessor.Process(command);
 
-            return Ok();
+            return Ok(new {Id = command.Id});
         }
     }
 }

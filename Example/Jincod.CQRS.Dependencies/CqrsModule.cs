@@ -1,4 +1,3 @@
-using System;
 using Autofac;
 
 namespace Jincod.CQRS.Dependencies
@@ -8,18 +7,20 @@ namespace Jincod.CQRS.Dependencies
         protected override void Load(ContainerBuilder builder)
         {
             builder
-                .Register<QueryProcessor>(ctx => {
+                .Register(ctx =>
+                {
                     var container = ctx.Resolve<IComponentContext>();
 
-                    return new QueryProcessor((t1, t2) => container.Resolve(typeof (IQuery<,>).MakeGenericType(t1, t2)));
+                    return new QueryProcessor((t1, t2) => container.Resolve(typeof(IQuery<,>).MakeGenericType(t1, t2)));
                 })
                 .As<IQueryProcessor>();
 
             builder
-                .Register<CommandProcessor>(ctx => {
+                .Register(ctx =>
+                {
                     var container = ctx.Resolve<IComponentContext>();
 
-                    return new CommandProcessor((t) => container.Resolve(typeof (ICommandHandler<>).MakeGenericType(t)));
+                    return new CommandProcessor(t => container.Resolve(typeof(ICommandHandler<>).MakeGenericType(t)));
                 })
                 .As<ICommandProcessor>();
         }

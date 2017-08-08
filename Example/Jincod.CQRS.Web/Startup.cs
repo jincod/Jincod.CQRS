@@ -27,7 +27,7 @@ namespace Jincod.CQRS.Web
 
             ApplicationContainer = builder.Build();
 
-            return new AutofacServiceProvider(this.ApplicationContainer);
+            return new AutofacServiceProvider(ApplicationContainer);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

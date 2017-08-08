@@ -23,12 +23,12 @@ namespace Jincod.CQRS.ConsoleApp
             Console.WriteLine("Executing command ...");
             var simpleCommand = new SimpleCommand();
             commandProcessor.Process(simpleCommand);
-            System.Console.WriteLine("Simple command");
+            Console.WriteLine("Simple command");
 
             Console.WriteLine("Executing query ...");
             var queryProcessor = container.Resolve<IQueryProcessor>();
             var context = new SimpleQueryContext();
-            SimpleEntity simpleEntity = queryProcessor.Process<SimpleEntity, SimpleQueryContext>(context);
+            var simpleEntity = queryProcessor.Process<SimpleEntity, SimpleQueryContext>(context);
             Console.WriteLine(simpleEntity.Name);
         }
     }

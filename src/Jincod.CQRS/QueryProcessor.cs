@@ -14,7 +14,7 @@ namespace Jincod.CQRS
         public TResponse Process<TResponse, TContext>(TContext query)
             where TContext : IQueryContext<TResponse>
         {
-            var q = (IQuery<TContext, TResponse>) _func(typeof (TContext), typeof (TResponse));
+            var q = (IQuery<TContext, TResponse>) _func(typeof(TContext), typeof(TResponse));
             return q.Execute(query);
         }
     }

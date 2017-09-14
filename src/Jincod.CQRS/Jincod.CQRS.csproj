@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-   <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
+   <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
    <PackageId>Jincod.CQRS</PackageId>
-   <PackageVersion>2.0.0</PackageVersion>
+   <PackageVersion>2.0.1</PackageVersion>
    <Authors>Vadim Abdrashitov</Authors>
    <Description>Interfaces for for develop app using CQRS principle</Description>
    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>

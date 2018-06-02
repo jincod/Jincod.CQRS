@@ -3,7 +3,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/mieoljc0aj53765m?svg=true)](https://ci.appveyor.com/project/jincod/jincod-cqrs)
 [![NuGet](https://img.shields.io/nuget/v/jincod.cqrs.svg)](https://www.nuget.org/packages/Jincod.CQRS)
 
-Interfaces for for develop app using CQRS principle
+Interfaces for develop app using CQRS principle
 
 ## Installation
 

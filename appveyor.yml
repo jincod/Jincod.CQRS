@@ -2,12 +2,21 @@ version: 2.0.{build}
 image: Visual Studio 2017
 
 build_script:
-  - dotnet restore
-  - dotnet build --configuration Release
-  - dotnet pack src\Jincod.CQRS\Jincod.CQRS.csproj --configuration Release --output %APPVEYOR_BUILD_FOLDER%
+  - dotnet build
+
+environment:
+  NUGET_API_KEY:
+    secure: 0QRcrLmvuSmZgWchRscyCm1btgQQVQPUhM5MWJ3CERMi60yZ2zMqbMx2tnkFqgT9
+
+deploy_script:
+  - bash scripts\deploy.sh
 
 artifacts:
   - path: '*.nupkg'
 
 after_build:
   - ps: Get-ChildItem .\*.nupkg | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+
+branches:
+  only:
+    - master

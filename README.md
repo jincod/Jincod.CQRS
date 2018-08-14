@@ -10,7 +10,12 @@ Interfaces for develop app using CQRS principle
 NuGet package [Jincod.CQRS](https://www.nuget.org/packages/Jincod.CQRS)
 
 ```PowerShell
-PM> Install-Package Jincod.CQRS
+Install-Package Jincod.CQRS
+```
+or 
+
+```bash
+dotnet add package Jincod.CQRS
 ```
 
 ## Usage
@@ -30,9 +35,9 @@ Query
 ```csharp
 public class SimpleQuery : IQuery<SimpleQueryContext, SimpleEntity>
 {
-    public SimpleEntity Execute(SimpleQueryContext queryContext)
+    public Task<SimpleEntity> ExecuteAsync(SimpleQueryContext queryContext)
     {
-        return new SimpleEntity {Name = "Simpl1"};
+        return Task.FromResult(new SimpleEntity { Name = "Simple1" });
     }
 }
 ```
@@ -42,7 +47,7 @@ QueryProcessor
 ```csharp
 var queryProcessor = container.Resolve<IQueryProcessor>();
 var context = new SimpleQueryContext();
-SimpleEntity simpleEntity = queryProcessor.Process<SimpleEntity, SimpleQueryContext>(context);
+var simpleEntity = await queryProcessor.ProcessAsync<SimpleEntity, SimpleQueryContext>(context);
 ```
 
 ### Commands
@@ -60,9 +65,10 @@ CommandHandler
 ```csharp
 public class SimpleCommandHandler : ICommandHandler<SimpleCommand>
 {
-    public void Handle(SimpleCommand command)
+    public Task HandleAsync(SimpleCommand command)
     {
         // do something
+        return Task.CompletedTask;
     }
 }
 ```
@@ -72,7 +78,7 @@ CommandProcessor
 ```csharp
 var commandProcessor = container.Resolve<ICommandProcessor>();
 var simpleCommand = new SimpleCommand();
-commandProcessor.Process(simpleCommand);
+await commandProcessor.ProcessAsync(simpleCommand);
 ```
 
 View [Full example](https://github.com/jincod/Jincod.CQRS/tree/master/Example)

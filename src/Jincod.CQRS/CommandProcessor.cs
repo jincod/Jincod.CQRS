@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Threading.Tasks;
 
 namespace Jincod.CQRS
 {
@@ -11,10 +12,10 @@ namespace Jincod.CQRS
             _func = func;
         }
 
-        public void Process<TCommand>(TCommand command) where TCommand : ICommand
+        public Task ProcessAsync<TCommand>(TCommand command) where TCommand : ICommand
         {
             var q = (ICommandHandler<TCommand>) _func(typeof(TCommand));
-            q.Handle(command);
+            return q.HandleAsync(command);
         }
     }
 }

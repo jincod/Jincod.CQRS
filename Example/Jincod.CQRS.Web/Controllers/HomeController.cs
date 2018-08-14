@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Jincod.CQRS.Commands;
 using Jincod.CQRS.Domain;
 using Jincod.CQRS.Queries;
@@ -6,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Jincod.CQRS.Web.Controllers
 {
     [Route("api/[controller]")]
-    public class HomeController : Controller
+    public class HomeController : ControllerBase
     {
         private readonly ICommandProcessor _commandProcessor;
         private readonly IQueryProcessor _queryProcessor;
@@ -18,16 +19,18 @@ namespace Jincod.CQRS.Web.Controllers
         }
 
         [HttpGet]
-        public SimpleEntity Get()
+        public async Task<SimpleEntity> GetAsync()
         {
-            return _queryProcessor
-                .Process<SimpleEntity, SimpleQueryContext>(new SimpleQueryContext());
+            var entity = await _queryProcessor
+                .ProcessAsync<SimpleEntity, SimpleQueryContext>(new SimpleQueryContext());
+
+            return entity;
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] SimpleCommand command)
+        public async Task<IActionResult> PostAsync([FromBody] SimpleCommand command)
         {
-            _commandProcessor.Process(command);
+            await _commandProcessor.ProcessAsync(command);
 
             return Ok(new {command.Id});
         }

@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Threading.Tasks;
 
 namespace Jincod.CQRS
 {
@@ -11,11 +12,12 @@ namespace Jincod.CQRS
             _func = func;
         }
 
-        public TResponse Process<TResponse, TContext>(TContext query)
+        public Task<TResponse> ProcessAsync<TResponse, TContext>(TContext query)
             where TContext : IQueryContext<TResponse>
         {
             var q = (IQuery<TContext, TResponse>) _func(typeof(TContext), typeof(TResponse));
-            return q.Execute(query);
+
+            return q.ExecuteAsync(query);
         }
     }
 }

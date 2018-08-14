@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace Jincod.CQRS.Commands
 {
@@ -10,10 +11,12 @@ namespace Jincod.CQRS.Commands
 
     public class SimpleCommandHandler : ICommandHandler<SimpleCommand>
     {
-        public void Handle(SimpleCommand command)
+        public Task HandleAsync(SimpleCommand command)
         {
             // do something
             command.Id = DateTime.UtcNow.Ticks.ToString();
+
+            return Task.CompletedTask;
         }
     }
 }

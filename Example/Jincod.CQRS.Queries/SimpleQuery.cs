@@ -1,4 +1,5 @@
-﻿using Jincod.CQRS.Domain;
+using System.Threading.Tasks;
+using Jincod.CQRS.Domain;
 
 namespace Jincod.CQRS.Queries
 {
@@ -8,9 +9,9 @@ namespace Jincod.CQRS.Queries
 
     public class SimpleQuery : IQuery<SimpleQueryContext, SimpleEntity>
     {
-        public SimpleEntity Execute(SimpleQueryContext queryContext)
+        public Task<SimpleEntity> ExecuteAsync(SimpleQueryContext queryContext)
         {
-            return new SimpleEntity {Name = "Simple1"};
+            return Task.FromResult(new SimpleEntity { Name = "Simple1" });
         }
     }
 }
